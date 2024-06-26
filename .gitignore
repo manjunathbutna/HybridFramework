@@ -1,0 +1,14 @@
+# Log files
+*.log
+
+# Temporary files
+*~
+*.tmp
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+
+test-output/
