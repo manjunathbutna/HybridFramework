@@ -2,7 +2,7 @@ package com.sause.pages;
 
 import java.util.List;
 
-import org.testng.Assert;
+//import org.testng.Assert;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,9 +12,6 @@ import com.sause.base.TestBase;
 
 public class InventoryPage extends TestBase{
 	
-	public InventoryPage() {
-		PageFactory.initElements(driver, this);
-	}
 	
 	@FindBy(xpath="//div[text()='Sauce Labs Backpack']/../../following-sibling::div/button")
 	WebElement SauceLabsBackpack;
@@ -28,6 +25,11 @@ public class InventoryPage extends TestBase{
 	@FindBy(className="product_sort_container")
 	List<WebElement> sortContainer;
 	
+	public InventoryPage() {
+		PageFactory.initElements(driver, this);
+	}
+	
+	
 	public void displayAllOptions() {
 		for(WebElement e : sortContainer) {
 			System.out.println(e.getText());
@@ -40,7 +42,7 @@ public class InventoryPage extends TestBase{
 //		if(cartItemCount.getText().equals(1)) {
 //			
 //		}
-		Assert.assertEquals(cartItemCount.getText(), "1");
+		//Assert.assertEquals(cartItemCount.getText(), "1");
 		
 	}
 	

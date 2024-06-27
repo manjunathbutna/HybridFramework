@@ -1,7 +1,7 @@
 package com.sause.TestCases;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.sause.base.TestBase;
@@ -17,7 +17,7 @@ public class InventoryPageTest extends TestBase{
 		super();
 	}
 	
-	@BeforeMethod
+	@BeforeClass
 	public void setup() {
 		Intialization();
 		login = new LoginPage();
@@ -36,7 +36,7 @@ public class InventoryPageTest extends TestBase{
 	}
 	
 	
-	@AfterMethod
+	@AfterClass
 	public void teardown() {
 		driver.quit();
 	}
